@@ -1,0 +1,386 @@
+{% extends 'base.html' %} {% block body %}
+<style>
+    /* The switch - the box around the slider */
+    
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    /* Hide default HTML checkbox */
+    
+    .switch input {
+        opacity: 0;
+        width: 1%;
+        height: 1%;
+    }
+    /* The slider */
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    input:checked+.slider {
+        background-color: #2196F3;
+    }
+    
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+    
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    /* Rounded sliders */
+    
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
+</style>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-sm-3 mt-4">
+                <h3>Driver Management</h3>
+            </div>
+            <div class="col-sm-6">
+                <div class="dropdown">
+                    <button class="mt-4 ml-3 btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="width: 15rem;">
+                      Sort by
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Vehicle Model</a></li>
+                        <li><a class="dropdown-item" href="#">Model</a></li>
+                        <li><a class="dropdown-item" href="#">Status</a></li>
+                        <li><a class="dropdown-item" href="#">Operational Areas</a></li>
+                        <li><a class="dropdown-item" href="#">Vehicle Listing</a></li>
+
+                        <li><a class="dropdown-item" href="#">Agency</a></li>
+
+                    </ul>
+                    <button class="mt-4 ml-3 btn btn-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="width: 15rem;">
+                        +Add Driver
+                    </button>
+                </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="card mx-auto">
+
+        <div class="card">
+            <div class="card-body text-center">
+                <table class="table table-striped" style="width: 65rem;">
+                    <thead class="text-white" style="background-color: #007bff;">
+                        <tr>
+                            <th>Name</th>
+                            <th>Reg-num</th>
+                            <th>Mobile</th>
+                            <th>Vehicle type</th>
+                            <th>Uploaded Documents</th>
+                            <th>Profile</th>
+                            <th>Base Charges</th>
+                            <th>Operational Areas</th>
+                            <th>Additional Hourly Charges</th>
+                            <th>Address</th>
+                            <th>Vehicle Model</th>
+                            <th>Status</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>abc</td>
+                            <td>xyz</td>
+                            <td>9874563210</td>
+                            <td>2 wheeler</td>
+                            <td><i class="fas fa-camera" style="cursor: pointer;"></i></td>
+                            <td><a href="{% url 'view' %}">View</a></td>
+                            <td>202/</td>
+                            <td>Ashok Vihar</td>
+                            <td>251/</td>
+                            <td>Ashok Vihar</td>
+                            <td>Honda</td>
+                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                            </td>
+
+                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>abc</td>
+                            <td>xyz</td>
+                            <td>9874563210</td>
+                            <td>2 wheeler</td>
+                            <td><i class="fas fa-camera" style="cursor: pointer;"></i></td>
+                            <td><a href="{% url 'view' %}">View</a></td>
+                            <td>202/</td>
+                            <td>Ashok Vihar</td>
+                            <td>251/</td>
+                            <td>Ashok Vihar</td>
+                            <td>Honda</td>
+                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                            </td>
+
+                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>abc</td>
+                            <td>xyz</td>
+                            <td>9874563210</td>
+                            <td>2 wheeler</td>
+                            <td><i class="fas fa-camera" style="cursor: pointer;"></i></td>
+                            <td><a href="{% url 'view' %}">View</a></td>
+                            <td>202/</td>
+                            <td>Ashok Vihar</td>
+                            <td>251/</td>
+                            <td>Ashok Vihar</td>
+                            <td>Honda</td>
+                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                            </td>
+
+                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>abc</td>
+                            <td>xyz</td>
+                            <td>9874563210</td>
+                            <td>2 wheeler</td>
+                            <td><i class="fas fa-camera" style="cursor: pointer;"></i></td>
+                            <td><a href="{% url 'view' %}">View</a></td>
+                            <td>202/</td>
+                            <td>Ashok Vihar</td>
+                            <td>251/</td>
+                            <td>Ashok Vihar</td>
+                            <td>Honda</td>
+                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                            </td>
+
+                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>abc</td>
+                            <td>xyz</td>
+                            <td>9874563210</td>
+                            <td>2 wheeler</td>
+                            <td><i class="fas fa-camera" style="cursor: pointer;"></i></td>
+                            <td><a href="{% url 'view' %}">View</a></td>
+                            <td>202/</td>
+                            <td>Ashok Vihar</td>
+                            <td>251/</td>
+                            <td>Ashok Vihar</td>
+                            <td>Honda</td>
+                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                            </td>
+
+                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>abc</td>
+                            <td>xyz</td>
+                            <td>9874563210</td>
+                            <td>2 wheeler</td>
+                            <td><i class="fas fa-camera" style="cursor: pointer;"></i></td>
+                            <td><a href="{% url 'view' %}">View</a></td>
+                            <td>202/</td>
+                            <td>Ashok Vihar</td>
+                            <td>251/</td>
+                            <td>Ashok Vihar</td>
+                            <td>Honda</td>
+                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                            </td>
+
+                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>abc</td>
+                            <td>xyz</td>
+                            <td>9874563210</td>
+                            <td>2 wheeler</td>
+                            <td><i class="fas fa-camera" style="cursor: pointer;"></i></td>
+                            <td><a href="{% url 'view' %}">View</a></td>
+                            <td>202/</td>
+                            <td>Ashok Vihar</td>
+                            <td>251/</td>
+                            <td>Ashok Vihar</td>
+                            <td>Honda</td>
+                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                            </td>
+
+                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>abc</td>
+                            <td>xyz</td>
+                            <td>9874563210</td>
+                            <td>2 wheeler</td>
+                            <td><i class="fas fa-camera" style="cursor: pointer;"></i></td>
+                            <td><a href="{% url 'view' %}">View</a></td>
+                            <td>202/</td>
+                            <td>Ashok Vihar</td>
+                            <td>251/</td>
+                            <td>Ashok Vihar</td>
+                            <td>Honda</td>
+                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                            </td>
+
+                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>abc</td>
+                            <td>xyz</td>
+                            <td>9874563210</td>
+                            <td>2 wheeler</td>
+                            <td><i class="fas fa-camera" style="cursor: pointer;"></i></td>
+                            <td><a href="{% url 'view' %}">View</a></td>
+                            <td>202/</td>
+                            <td>Ashok Vihar</td>
+                            <td>251/</td>
+                            <td>Ashok Vihar</td>
+                            <td>Honda</td>
+                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                            </td>
+
+                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>abc</td>
+                            <td>xyz</td>
+                            <td>9874563210</td>
+                            <td>2 wheeler</td>
+                            <td><i class="fas fa-camera" style="cursor: pointer;"></i></td>
+                            <td><a href="{% url 'view' %}">View</a></td>
+                            <td>202/</td>
+                            <td>Ashok Vihar</td>
+                            <td>251/</td>
+                            <td>Ashok Vihar</td>
+                            <td>Honda</td>
+                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                            </td>
+
+                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                        </tr>
+                        <tr>
+                            <td>abc</td>
+                            <td>xyz</td>
+                            <td>9874563210</td>
+                            <td>2 wheeler</td>
+                            <td><i class="fas fa-camera" style="cursor: pointer;"></i></td>
+                            <td><a href="{% url 'view' %}">View</a></td>
+                            <td>202/</td>
+                            <td>Ashok Vihar</td>
+                            <td>251/</td>
+                            <td>Ashok Vihar</td>
+                            <td>Honda</td>
+                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                            </td>
+
+                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                        </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+        <nav aria-label="..." style="margin-left: auto;">
+            <ul class="pagination">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+    {% endblock body %}

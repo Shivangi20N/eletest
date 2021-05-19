@@ -1,0 +1,344 @@
+{% extends 'base.html' %} {% block body %}
+<style>
+    /* The switch - the box around the slider */
+    
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    /* Hide default HTML checkbox */
+    
+    .switch input {
+        opacity: 0;
+        width: 1%;
+        height: 1%;
+    }
+    /* The slider */
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    input:checked+.slider {
+        background-color: #2196F3;
+    }
+    
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+    
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    /* Rounded sliders */
+    
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
+</style>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-8">
+                    <h1 class="m-0 text-dark">On Demand Service</h1>
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active"></li>
+                    </ol>
+                    <div class="dropdown">
+                        <button class="text-left btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="width: 15rem;">
+                          Sort by
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Status on</a></li>
+                            <li><a class="dropdown-item" href="#">Status off</a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="card m-3" style="width: 65rem;">
+                    <div class="btn-toolbar mx-3" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group me-3" role="group" aria-label="First group">
+                            <a href="{% url 'demand' %}" class="btn btn-light">Category</a>
+
+                        </div>
+
+                        <div class="btn-group me-3" role="group" aria-label="Second group">
+
+                            <a href="{% url 'sub' %}" class="btn btn-light">Sub Category</a>
+
+                        </div>
+                        <div class="btn-group me-3" role="group" aria-label="Second group">
+                            <a href="{% url 'service' %}" class="btn btn-light">Services</a>
+
+                        </div>
+                        <div class="btn-group me-3" role="group" aria-label="Second group">
+                            <a href="{% url 'provider' %}" class="btn btn-primary">Service Providers</a>
+
+                        </div>
+                        <div class="btn-group me-3" role="group" aria-label="Third group">
+                            <a href="{% url 'add' %}" class="btn btn-light">Add Service</a>
+                        </div>
+                    </div>
+                    <div class="card mx-auto">
+                        <div class="card-body text-center">
+                            <table class="table table-striped" style="width: 60rem;">
+                                <thead class="text-white" style="background-color: #007bff;">
+                                    <tr>
+                                        <th>Business</th>
+                                        <th>Owner</th>
+
+                                        <th>Agents</th>
+
+                                        <th>Contact Person</th>
+                                        <th>Mobile</th>
+                                        <th>Email</th>
+                                        <th>Order Capacity</th>
+                                        <th>Services with Charges</th>
+                                        <th>Status</th>
+                                        <th>Address</th>
+
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                    <tr>
+                                        <td>abc</td>
+                                        <td>xyz</td>
+                                        <td> <a href="{% url 'agent_view' %}">View</a></td>
+                                        <td>Akash</td>
+                                        <td>9874563210</td>
+                                        <td>chk@gmail.co</td>
+                                        <td>5</td>
+                                        <td> <a href="{% url 'charges_view' %}">View</a></td>
+                                        <td><label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label></i>
+                                        </td>
+
+                                        <td>Delhi326</td>
+                                        <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>abc</td>
+                                        <td>xyz</td>
+                                        <td> <a href="{% url 'agent_view' %}">View</a></td>
+                                        <td>Akash</td>
+                                        <td>9874563210</td>
+                                        <td>chk@gmail.co</td>
+                                        <td>5</td>
+                                        <td> <a href="{% url 'charges_view' %}">View</a></td>
+                                        <td><label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label></i>
+                                        </td>
+
+                                        <td>Delhi326</td>
+                                        <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>abc</td>
+                                        <td>xyz</td>
+                                        <td> <a href="{% url 'agent_view' %}">View</a></td>
+                                        <td>Akash</td>
+                                        <td>9874563210</td>
+                                        <td>chk@gmail.co</td>
+                                        <td>5</td>
+                                        <td> <a href="{% url 'charges_view' %}">View</a></td>
+                                        <td><label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label></i>
+                                        </td>
+
+                                        <td>Delhi326</td>
+                                        <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>abc</td>
+                                        <td>xyz</td>
+                                        <td> <a href="{% url 'agent_view' %}">View</a></td>
+                                        <td>Akash</td>
+                                        <td>9874563210</td>
+                                        <td>chk@gmail.co</td>
+                                        <td>5</td>
+                                        <td> <a href="{% url 'charges_view' %}">View</a></td>
+                                        <td><label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label></i>
+                                        </td>
+
+                                        <td>Delhi326</td>
+                                        <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>abc</td>
+                                        <td>xyz</td>
+                                        <td> <a href="{% url 'agent_view' %}">View</a></td>
+                                        <td>Akash</td>
+                                        <td>9874563210</td>
+                                        <td>chk@gmail.co</td>
+                                        <td>5</td>
+                                        <td> <a href="{% url 'charges_view' %}">View</a></td>
+                                        <td><label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label></i>
+                                        </td>
+
+                                        <td>Delhi326</td>
+                                        <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>abc</td>
+                                        <td>xyz</td>
+                                        <td> <a href="{% url 'agent_view' %}">View</a></td>
+                                        <td>Akash</td>
+                                        <td>9874563210</td>
+                                        <td>chk@gmail.co</td>
+                                        <td>5</td>
+                                        <td> <a href="{% url 'charges_view' %}">View</a></td>
+                                        <td><label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label></i>
+                                        </td>
+
+                                        <td>Delhi326</td>
+                                        <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>abc</td>
+                                        <td>xyz</td>
+                                        <td> <a href="{% url 'agent_view' %}">View</a></td>
+                                        <td>Akash</td>
+                                        <td>9874563210</td>
+                                        <td>chk@gmail.co</td>
+                                        <td>5</td>
+                                        <td> <a href="{% url 'charges_view' %}">View</a></td>
+                                        <td><label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label></i>
+                                        </td>
+
+                                        <td>Delhi326</td>
+                                        <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>abc</td>
+                                        <td>xyz</td>
+                                        <td> <a href="{% url 'agent_view' %}">View</a></td>
+                                        <td>Akash</td>
+                                        <td>9874563210</td>
+                                        <td>chk@gmail.co</td>
+                                        <td>5</td>
+                                        <td> <a href="{% url 'charges_view' %}">View</a></td>
+                                        <td><label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label></i>
+                                        </td>
+
+                                        <td>Delhi326</td>
+                                        <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>abc</td>
+                                        <td>xyz</td>
+                                        <td> <a href="{% url 'agent_view' %}">View</a></td>
+                                        <td>Akash</td>
+                                        <td>9874563210</td>
+                                        <td>chk@gmail.co</td>
+                                        <td>5</td>
+                                        <td> <a href="{% url 'charges_view' %}">View</a></td>
+                                        <td><label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label></i>
+                                        </td>
+
+                                        <td>Delhi326</td>
+                                        <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>abc</td>
+                                        <td>xyz</td>
+                                        <td> <a href="{% url 'agent_view' %}">View</a></td>
+                                        <td>Akash</td>
+                                        <td>9874563210</td>
+                                        <td>chk@gmail.co</td>
+                                        <td>5</td>
+                                        <td> <a href="{% url 'charges_view' %}">View</a></td>
+                                        <td><label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label></i>
+                                        </td>
+
+                                        <td>Delhi326</td>
+                                        <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                    <nav aria-label="..." style="margin-left: auto;">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+                {% endblock body %}

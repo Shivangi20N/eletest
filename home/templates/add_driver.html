@@ -1,0 +1,139 @@
+{% extends 'base.html' %} {% load static %} {% block body %}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-8">
+                    <h1 class="m-0 text-dark">Add Driver</h1>
+                </div>
+                <div class="col-sm-4">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active"></li>
+                    </ol>
+                    <div class="dropdown">
+                        <button class=" btn btn-primary " type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width: 15rem;">
+                          View All Drivers
+                        </button>
+
+                    </div>
+
+                </div>
+                <!-- /.col -->
+
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- profile -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="card mx-3">
+                <div class="">
+                    <form class="row g- mr-3">
+                        <div class="col-md-4">
+                            <label for="inputEmail4" class="form-label">First Name</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="First Name">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputPassword4" class="form-label">Last Name</label>
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="Last Name">
+                        </div>
+                        <div class=" col-md-4 dropdown">
+                            <label for="formGroupExampleInput" class="form-label">Gender</label>
+                            <button class="text-left btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="width: 22rem;border: groove;">
+                            Select
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Male</a></li>
+                                <li><a class="dropdown-item" href="#">Female</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputAddress" class="form-label">Mobile Number</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="00000-00000">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputAddress" class="form-label">Email Id</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Example@gmail.com">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="inputAddress" class="form-label">Aadhar Card</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Select">
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary" style="margin-top: 2rem;">browser</button>
+                        </div>
+                        <h4 style="color: #007bff; margin: 1%;">Add Vehicle Details</h4>
+                        <div class="col-md-4">
+                            <label for="inputCity" class="form-label">Vehicle type</label>
+                            <input type="text" class="form-control" id="inputCity" placeholder="vehicle type">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputCity" class="form-label">Registration Num</label>
+                            <input type="text" class="form-control" id="inputCity" placeholder="Registration Num">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="inputAddress" class="form-label">Registration</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Upload PC Picture">
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary" style="margin-top: 2rem;">browser</button>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="inputAddress" class="form-label">Police Varification Document</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Uploade Document">
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary" style="margin-top: 2rem;">browser</button>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="inputAddress" class="form-label">Vehicle Passing Document</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Upload Document">
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary" style="margin-top: 2rem;">browser</button>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="inputAddress" class="form-label">Other Documents</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Upload Document">
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary" style="margin-top: 2rem;">browse</button>
+                        </div>
+                        <h4 style="color: #007bff; margin: 1%;">Authentication</h4>
+                        <div class="col-md-4">
+                            <label for="inputAddress" class="form-label">User Name</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="inputAddress" class="form-label">Password</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="">
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <button class="btn btn-primary" style="margin-top: 2rem; width: 10rem;">Save</button>
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <button class="btn btn-light" style="margin-top: 2rem;">Reset</button>
+                        </div>
+
+
+
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
+<!-- profile -->

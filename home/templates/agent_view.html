@@ -1,0 +1,404 @@
+{% extends 'base.html' %} {% block body %}
+<style>
+    /* The switch - the box around the slider */
+    
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    /* Hide default HTML checkbox */
+    
+    .switch input {
+        opacity: 0;
+        width: 1%;
+        height: 1%;
+    }
+    /* The slider */
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    input:checked+.slider {
+        background-color: #2196F3;
+    }
+    
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+    
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    /* Rounded sliders */
+    
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
+</style>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-8">
+                    <a href="{% url 'provider' %}">
+                        <h1 class="m-0 text-dark">Agents</h1>
+                    </a>
+                </div>
+                <!-- /.col -->
+
+
+                <div class="btn-toolbar mx-3" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group me-3" role="group" aria-label="First group">
+
+
+                        <div class="card mx-auto">
+                            <div class="card-body text-center">
+                                <table class="table table-striped" style="width: 60rem;">
+                                    <thead class="text-white" style="background-color: #007bff;">
+                                        <tr>
+                                            <th>Office ID</th>
+                                            <th>Name</th>
+                                            <th>Mobile</th>
+                                            <th>Email</th>
+                                            <th>Specification</th>
+                                            <th>Gender</th>
+                                            <th>DOB</th>
+                                            <th>Address</th>
+                                            <th>Image</th>
+                                            <th>Id proof type</th>
+                                            <th>Operational hours</th>
+                                            <th>Documents images</th>
+                                            <th>Maximum daily calls</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>155</td>
+                                            <td>Deepa</td>
+                                            <td>9265417899</td>
+                                            <td>Chk@gmail.com</td>
+                                            <td>abcdefghijkal</td>
+                                            <td>Male</td>
+                                            <td>20/12/1995</td>
+                                            <td>426/3 Delhi</td>
+                                            <td><input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                
+                                                  <i class="fas fa-camera fa-2x" style="cursor: pointer;"></i>
+                                                  
+                                                </label></td>
+                                            <td>Adhar card</td>
+                                            <td>2am to 9pm</td>
+                                            <td>2</td>
+                                            <td>2hr</td>
+                                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                                            </td>
+                                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>155</td>
+                                            <td>Deepa</td>
+                                            <td>9265417899</td>
+                                            <td>Chk@gmail.com</td>
+                                            <td>abcdefghijkal</td>
+                                            <td>Male</td>
+                                            <td>20/12/1995</td>
+                                            <td>426/3 Delhi</td>
+                                            <td><input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                
+                                                  <i class="fas fa-camera fa-2x" style="cursor: pointer;"></i>
+                                                  
+                                                </label></td>
+                                            <td>Adhar card</td>
+                                            <td>2am to 9pm</td>
+                                            <td>2</td>
+                                            <td>2hr</td>
+                                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                                            </td>
+                                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>155</td>
+                                            <td>Deepa</td>
+                                            <td>9265417899</td>
+                                            <td>Chk@gmail.com</td>
+                                            <td>abcdefghijkal</td>
+                                            <td>Male</td>
+                                            <td>20/12/1995</td>
+                                            <td>426/3 Delhi</td>
+                                            <td><input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                
+                                                  <i class="fas fa-camera fa-2x" style="cursor: pointer;"></i>
+                                                  
+                                                </label></td>
+                                            <td>Adhar card</td>
+                                            <td>2am to 9pm</td>
+                                            <td>2</td>
+                                            <td>2hr</td>
+                                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                                            </td>
+                                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>155</td>
+                                            <td>Deepa</td>
+                                            <td>9265417899</td>
+                                            <td>Chk@gmail.com</td>
+                                            <td>abcdefghijkal</td>
+                                            <td>Male</td>
+                                            <td>20/12/1995</td>
+                                            <td>426/3 Delhi</td>
+                                            <td><input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                
+                                                  <i class="fas fa-camera fa-2x" style="cursor: pointer;"></i>
+                                                  
+                                                </label></td>
+                                            <td>Adhar card</td>
+                                            <td>2am to 9pm</td>
+                                            <td>2</td>
+                                            <td>2hr</td>
+                                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                                            </td>
+                                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>155</td>
+                                            <td>Deepa</td>
+                                            <td>9265417899</td>
+                                            <td>Chk@gmail.com</td>
+                                            <td>abcdefghijkal</td>
+                                            <td>Male</td>
+                                            <td>20/12/1995</td>
+                                            <td>426/3 Delhi</td>
+                                            <td><input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                
+                                                  <i class="fas fa-camera fa-2x" style="cursor: pointer;"></i>
+                                                  
+                                                </label></td>
+                                            <td>Adhar card</td>
+                                            <td>2am to 9pm</td>
+                                            <td>2</td>
+                                            <td>2hr</td>
+                                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                                            </td>
+                                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>155</td>
+                                            <td>Deepa</td>
+                                            <td>9265417899</td>
+                                            <td>Chk@gmail.com</td>
+                                            <td>abcdefghijkal</td>
+                                            <td>Male</td>
+                                            <td>20/12/1995</td>
+                                            <td>426/3 Delhi</td>
+                                            <td><input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                
+                                                  <i class="fas fa-camera fa-2x" style="cursor: pointer;"></i>
+                                                  
+                                                </label></td>
+                                            <td>Adhar card</td>
+                                            <td>2am to 9pm</td>
+                                            <td>2</td>
+                                            <td>2hr</td>
+                                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                                            </td>
+                                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>155</td>
+                                            <td>Deepa</td>
+                                            <td>9265417899</td>
+                                            <td>Chk@gmail.com</td>
+                                            <td>abcdefghijkal</td>
+                                            <td>Male</td>
+                                            <td>20/12/1995</td>
+                                            <td>426/3 Delhi</td>
+                                            <td><input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                
+                                                  <i class="fas fa-camera fa-2x" style="cursor: pointer;"></i>
+                                                  
+                                                </label></td>
+                                            <td>Adhar card</td>
+                                            <td>2am to 9pm</td>
+                                            <td>2</td>
+                                            <td>2hr</td>
+                                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                                            </td>
+                                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>155</td>
+                                            <td>Deepa</td>
+                                            <td>9265417899</td>
+                                            <td>Chk@gmail.com</td>
+                                            <td>abcdefghijkal</td>
+                                            <td>Male</td>
+                                            <td>20/12/1995</td>
+                                            <td>426/3 Delhi</td>
+                                            <td><input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                
+                                                  <i class="fas fa-camera fa-2x" style="cursor: pointer;"></i>
+                                                  
+                                                </label></td>
+                                            <td>Adhar card</td>
+                                            <td>2am to 9pm</td>
+                                            <td>2</td>
+                                            <td>2hr</td>
+                                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                                            </td>
+                                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>155</td>
+                                            <td>Deepa</td>
+                                            <td>9265417899</td>
+                                            <td>Chk@gmail.com</td>
+                                            <td>abcdefghijkal</td>
+                                            <td>Male</td>
+                                            <td>20/12/1995</td>
+                                            <td>426/3 Delhi</td>
+                                            <td><input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                
+                                                  <i class="fas fa-camera fa-2x" style="cursor: pointer;"></i>
+                                                  
+                                                </label></td>
+                                            <td>Adhar card</td>
+                                            <td>2am to 9pm</td>
+                                            <td>2</td>
+                                            <td>2hr</td>
+                                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                                            </td>
+                                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>155</td>
+                                            <td>Deepa</td>
+                                            <td>9265417899</td>
+                                            <td>Chk@gmail.com</td>
+                                            <td>abcdefghijkal</td>
+                                            <td>Male</td>
+                                            <td>20/12/1995</td>
+                                            <td>426/3 Delhi</td>
+                                            <td><input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                
+                                                  <i class="fas fa-camera fa-2x" style="cursor: pointer;"></i>
+                                                  
+                                                </label></td>
+                                            <td>Adhar card</td>
+                                            <td>2am to 9pm</td>
+                                            <td>2</td>
+                                            <td>2hr</td>
+                                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                                            </td>
+                                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>155</td>
+                                            <td>Deepa</td>
+                                            <td>9265417899</td>
+                                            <td>Chk@gmail.com</td>
+                                            <td>abcdefghijkal</td>
+                                            <td>Male</td>
+                                            <td>20/12/1995</td>
+                                            <td>426/3 Delhi</td>
+                                            <td><input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                
+                                                  <i class="fas fa-camera fa-2x" style="cursor: pointer;"></i>
+                                                  
+                                                </label></td>
+                                            <td>Adhar card</td>
+                                            <td>2am to 9pm</td>
+                                            <td>2</td>
+                                            <td>2hr</td>
+                                            <td><label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                              </label></i>
+                                            </td>
+                                            <td><i class="fas fa-pen" style="cursor: pointer;"> <i class="fas fa-trash-alt"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button type="button" class="btn btn-primary mt-3 " style="width: 10rem;">Add Field</button>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                        {% endblock body %}

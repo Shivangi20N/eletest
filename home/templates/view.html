@@ -1,0 +1,125 @@
+{% extends 'base.html' %} {% load static %} {% block body %}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-8">
+                    <a href="{% url 'driver' %}">
+                        <h1 class="m-0 text-dark">Profile</h1>
+                    </a>
+                </div>
+                <!-- /.col -->
+
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- profile -->
+    <div class="container-fluid mx-3">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card text-center" style="width: 12rem;">
+                    <img src="{% static 'img/1.jpg' %}" style="padding: 1rem;" class="card-img-top" alt="...">
+                    <h5 class="card-title">Name</h5>
+                    <div class="card-body">
+
+
+                        <a href="#" class="btn btn-primary">Remove picture</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-lg-8">
+                <div class="">
+                    <form class="row g-2">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">First Name</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Last Name</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">E-mail id</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Gender</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Password</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">Confirm Password</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">DOB</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputAddress" class="form-label">GSTIN</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="inputAddress" class="form-label">Registered Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="">
+                        </div>
+
+
+
+                        <div class="col-4 text-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                
+                                  <i class="fas fa-camera fa-3x" style="cursor: pointer;"></i>
+                                  
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary mb-2" style="width: 10rem;">Add field</button>
+
+
+                        </div>
+                        <div class="col-4 text-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                
+                                  <i class="fas fa-camera  fa-3x" style="cursor: pointer;"></i>
+                                  
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-2" style="width: 10rem;">Update</button>
+
+
+                        </div>
+                        <div class="col-4 text-center">
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                
+                                  <i class="fas fa-camera fa-3x" style="cursor: pointer;"></i>
+                                  
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-2" style="width: 10rem;">Delete</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
+<!-- profile -->

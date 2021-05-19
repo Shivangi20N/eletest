@@ -1,0 +1,142 @@
+{% extends 'base.html' %} {% block body %}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-8">
+                    <h1 class="m-0 text-dark">On Demand Service</h1>
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active"></li>
+                    </ol>
+                    <div class="dropdown">
+                        <button class="text-left btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="width: 15rem;">
+                          Sort by
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Status on</a></li>
+                            <li><a class="dropdown-item" href="#">Status off</a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="card m-3" style="width: 65rem;">
+                    <div class="btn-toolbar mx-3" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group me-3" role="group" aria-label="First group">
+                            <a href="{% url 'demand' %}" class="btn btn-light">Category</a>
+
+                        </div>
+
+                        <div class="btn-group me-3" role="group" aria-label="Second group">
+
+                            <a href="{% url 'sub' %}" class="btn btn-light">Sub Category</a>
+
+                        </div>
+                        <div class="btn-group me-3" role="group" aria-label="Second group">
+                            <a href="{% url 'service' %}" class="btn btn-light">Services</a>
+
+                        </div>
+                        <div class="btn-group me-3" role="group" aria-label="Second group">
+                            <a href="{% url 'provider' %}" class="btn btn-light">Service Providers</a>
+
+                        </div>
+                        <div class="btn-group me-3" role="group" aria-label="Third group">
+                            <a href="{% url 'add' %}" class="btn btn-primary">Add Service</a>
+                        </div>
+                    </div>
+                    <h4 style="margin: 1rem;">Basic information</h4>
+                    <p style="margin-left: 2%;">Fill all information below</p>
+                    <div class="container-fluid">
+                        <form class="row g-2">
+                            <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Product Name</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                            </div>
+                            <div class="dropdown col-md-6">
+                                <label for="formGroupExampleInput" class="form-label">Category</label>
+                                <button class="text-left btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="width: 31rem;border: groove;">
+                                  Choose
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">On Demand</a></li>
+                                    <li><a class="dropdown-item" href="#">Courier</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputAddress" class="form-label">Add heading field</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="">
+                            </div>
+                            <div class="dropdown col-md-6">
+                                <label for="formGroupExampleInput" class="form-label"> Select Sub Category</label>
+                                <button class="text-left btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="width: 31rem;border: groove;">
+                                  Select
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">On Demand</a></li>
+                                    <li><a class="dropdown-item" href="#">Courier</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputAddress" class="form-label">Features</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputAddress" class="form-label">Product Description</label>
+                                <textarea class="form-control" rows="3" id="comment"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputCity" class="form-label">Price</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputAddress" class="form-label">Additional hourly charges</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputAddress" class="form-label">Add base hours</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="">
+                            </div>
+                            <div class="col-md-7 ml-6">
+                                <label for="comment">Product image</label>
+                                <textarea class="form-control text-center" rows="6" id="comment" placeholder="Drop Files here or click to upload" style="text-align: center;border: dotted;margin-left: 30%;"></textarea>
+
+                            </div>
+                            <h3>Meta Date</h3>
+                            <p>Fill all information below</p>
+                            <div class="col-md-6">
+                                <label for="inputAddress" class="form-label">Meta Title</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputAddress" class="form-label">Meta Description</label>
+                                <textarea class="form-control" rows="3" id="comment"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputAddress" class="form-label">Meta Keywords</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="">
+                            </div>
+                            <div class="col-6 mb-3" style="margin-left: 55%;">
+                                <button type="submit" class="btn btn-primary" style="width: 15rem;">Save Change</button>
+                                <button type="submit" class="btn btn-secondary" style="width: 10rem;">Cancel</button>
+                            </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+</div>
+</div>
+</div>
+{% endblock body %}
